@@ -1,7 +1,7 @@
-var app = angular.module("MiPrimerApp",[])
-app.controller("FirsController",function($scope){
+angular.module("MiPrimerApp",[]) // El segundo parametro hace referencia a los demas modulos que este depende 
+.controller("FirsController",function($scope){
 	$scope.nombre = "Benjamin Molina";
-	/*$scope.nuevoComentario = {};
+	$scope.nuevoComentario = {};
 	$scope.comentarios = 
 	[
 		{
@@ -18,5 +18,5 @@ app.controller("FirsController",function($scope){
 	$scope.agregarComentario = function(){
 		$scope.comentarios.push($scope.nuevoComentario);
 		$scope.nuevoComentario = {};
-	}*/
+	}
 });
