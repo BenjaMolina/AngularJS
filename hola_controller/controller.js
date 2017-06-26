@@ -1,8 +1,8 @@
 angular.module("MiPrimerApp",[]) // El segundo parametro hace referencia a los demas modulos que este depende 
-.controller("FirsController",function($scope){
-	$scope.nombre = "Benjamin Molina";
-	$scope.nuevoComentario = {};
-	$scope.comentarios = 
+.controller("FirsController",["$scope",function(s){
+	s.nombre = "Benjamin Molina";
+	s.nuevoComentario = {};
+	s.comentarios = 
 	[
 		{
 			comentario: "Buen Tutorail",
@@ -15,8 +15,8 @@ angular.module("MiPrimerApp",[]) // El segundo parametro hace referencia a los d
 		}
 	];
 
-	$scope.agregarComentario = function(){
-		$scope.comentarios.push($scope.nuevoComentario);
-		$scope.nuevoComentario = {};
+	s.agregarComentario = function(){
+		s.comentarios.push(s.nuevoComentario);
+		s.nuevoComentario = {};
 	}
-});
+}]);
