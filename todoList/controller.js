@@ -15,14 +15,15 @@ angular.module("ToDoList",["LocalStorageModule"])
 	$scope.$watchCollection('todo',function(newValue,oldValue){
 		localStorageService.set("angular-todolist",$scope.todo);
 	});
+
 	$scope.addActv = function(){
 		$scope.todo.push($scope.newActv);
 		$scope.newActv = {};
 		//localStorageService.set("angular-todolist",$scope.todo);	
 	}
 
-	$scope.clear = function(){
-		$scope.todo = [];
+	//$scope.clear = function(){
+	//	$scope.todo = [];
 		//localStorageService.set("angular-todolist",$scope.todo);
-	}
+	//}
 });
