@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="mainModule">
+<head>
+	<meta charset="utf-8">
+	<title>Hola Filters</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.32/angular.min.js"></script>
+	<script>
+		angular.module("mainModule",[])
+			.controller("firstController",function($scope){
+				$scope.nombre = "Benjamin";
+				/*setTimeout(function(){
+					$scope.$apply(function(){
+						$scope.nombre = "Benjamin Molina Sosa"
+					});
+				},2000);*/
+
+				document.querySelector("#btnClick"),addEventListener("click",function(){
+					$scope.$apply(function(){
+						$scope.nombre = "Benjamin Molina Sosa"
+					});	
+				});
+			});
+
+	</script>
+</head>
+<body ng-controller="firstController">
+	<h1>{{nombre}}</h1>
+	<button id="btnClick">Haz Click</button>
+</body>
+</html>
